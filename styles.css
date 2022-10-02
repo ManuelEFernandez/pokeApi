@@ -1,18 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 * {
 
     padding: 0;
     margin: 0;
     box-sizing:border-box;
+    font-family: 'montserrat';
     
 }
 
+#pokebola-arriba {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    
+    z-index: 10;
+    transform: rotate(5.750rad);
+}
+
+
+.titulo {
+
+    position: relative;
+
+}
+
+.titulo:after {
+
+    content: "API";
+
+    color: rgb(56, 100, 182);
+   
+    background-color:  #ffcb05;
+    height: 20px;
+    width: 40px;
+    z-index: 9;
+    text-align: center;
+    top: 20px;
+   left: 7px;
+    position: absolute;
+    transform: rotate(5.750rad);
+    font-family: 'bungee';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 .logo-poke {
 
     padding: 10px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 10px 10px 1px rgb(66, 108, 188);
+    border: 5px inset   rgb(82, 137, 240);
+    position: relative;
 }
 
 body {
@@ -22,7 +67,7 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(to bottom, #e1e1e1, #969696); 
-    padding: 30px 20px;
+    padding: 30px 20px 90px 20px;
     gap: 30px;
 }
 
@@ -33,7 +78,9 @@ body {
     flex-wrap: wrap;
     height: auto;
     gap: 20px;
-    width: 650px;
+    width: 80%;
+    max-width: 950px;
+    min-width: 350px;
     justify-content: center;
     align-items: center;
     
@@ -82,13 +129,22 @@ h2 {
 
     position: absolute;
     z-index: 1;
-    font-size: 150px;
+    font-size: 20px;
     font-weight: bold;
-    top: -30px;
-    color: rgb(25, 25, 25);
-    text-shadow: 3px 3px 1px rgb(83, 83, 83);
-    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    opacity: 30%;
+    top: 15px;
+    right: 20px;
+    
+    background-color:#a5d9ea;
+    color: black;
+    padding: 0px 5px;
+
+    
+}
+
+.exp {
+
+    background-color: rgba(135, 206, 250, 0.346);
+    padding: 0px 15px;
 }
 
 .caja-data {
@@ -98,7 +154,7 @@ h2 {
   align-items: center;
   flex-direction: column;
   padding-top: 10px;
-  font-weight: bold;
+ 
   color: white;
 
 }
@@ -111,7 +167,7 @@ gap: 10px;
 padding: 10px 0px;
 }
 
-.fire, .water, .flying, .poison, .grass {
+.fire, .water, .flying, .poison, .grass, .bug, .fighting, .ground, .rock, .ghost, .dark, .normal, .psychic, .dragon, .fairy {
     
      height: 30px;
      width: 80px;
@@ -125,6 +181,56 @@ padding: 10px 0px;
 
 .fire {
     background-color: rgb(226, 24, 24);
+}
+
+.fighting {
+    background-color: rgb(155, 20, 20);
+}
+
+.ground {
+    background-color: rgb(87, 51, 27);
+}
+
+
+.rock {
+    background-color: rgb(69, 69, 69);
+}
+
+.bug {
+    background-color: rgb(63, 123, 125);
+}
+
+
+.ghost {
+    background: none;
+    border: 1px solid white;
+}
+
+.electric {
+
+    background-color: rgb(245, 245, 55);
+    color: black;
+}
+
+.psychic {
+
+    background-color: rgb(251, 251, 251);
+    color: black;
+}
+
+.dragon {
+
+    background-color: orange;
+}
+
+.dark {
+
+    background-color: rgb(21, 21, 21);
+}
+
+.fairy {
+
+    background-color: rgb(143, 8, 141);
 }
 
 .grass {
@@ -146,8 +252,76 @@ padding: 10px 0px;
     background-color: blue;
 }
 
+.normal {
+
+    background-color: lightblue;
+    color: black;
+}
+
 .datos-detalles {
 
     padding-top: 5px;
 
 }
+
+.datos-detalles {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border:10px solid #FFF;
+    border-radius: 50%;
+    position: relative;
+    transform:rotate(45deg);
+    box-sizing: border-box;
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    inset:-10px;
+    border-radius: 50%;
+    border:10px solid #FF3D00;
+    animation: prixClipFix 2s infinite linear;
+    
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+    
+
+  .pokebola {
+
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    border-radius: 100px;
+   
+    box-shadow: 2px 2px 1px rgb(90, 90, 90);
+  }
+
+
+  .caja-cargado {
+
+    display: none;
+  }
+
+  .mostrar {
+    display: block;
+  }
+
+

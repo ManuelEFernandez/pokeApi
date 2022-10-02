@@ -1,5 +1,5 @@
 const baseURL = "https://pokeapi.co/api/v2/pokemon/";
-const loader = document.getElementById("container-pokemons");
+const loader = document.getElementById("caja-cargado");
 const caja = document.getElementById("caja");
 
 let option = {
@@ -43,6 +43,7 @@ const dibujarPokemons = (pokemon) => {
 
     return `
     <div class="pokemon">
+    <img class="pokebola" src="/pokeball.png" alt="pokebola">
     <img class="imagen-pokemon" src="${sprites.other.home.front_default}" alt="imagen del pokemon">
     <p class="id-pokemon">#${id}</p>
     <h2>${name.toUpperCase()}</h2>
@@ -56,8 +57,8 @@ const dibujarPokemons = (pokemon) => {
             </div>
     <div class="datos-detalles">
     
-    <p class="height">height: #${height / 10}kg</p>
-    <p class="weight">weight: #${weight / 10}m</p>
+    <p class="height"># ${height / 10} mts</p>
+    <p class="weight"># ${weight / 10} kg</p>
     </div>
     </div>
 </div>
