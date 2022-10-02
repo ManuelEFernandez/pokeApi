@@ -168,7 +168,7 @@ gap: 10px;
 padding: 10px 0px;
 }
 
-.fire, .water, .flying, .poison, .grass, .bug, .fighting, .ground, .rock, .ghost, .dark, .normal, .psychic, .dragon, .fairy {
+.fire, .water, .flying, .poison, .grass, .bug, .fighting, .ground, .rock, .ghost, .dark, .normal, .psychic, .dragon, .fairy, .electric, .steel, .ice {
     
      height: 30px;
      width: 80px;
@@ -180,6 +180,16 @@ padding: 10px 0px;
         border-radius: 10px;
 }
 
+.ice {
+
+    background-color:rgb(135, 186, 214);
+color: black;
+}
+
+.steel {
+background-color:rgb(134, 134, 134);
+color: black;
+}
 .fire {
     background-color: rgb(226, 24, 24);
 }
@@ -326,3 +336,7 @@ padding: 10px 0px;
   }
 
 
+.nombre-chico {
+
+    font-size: 16px;
+}

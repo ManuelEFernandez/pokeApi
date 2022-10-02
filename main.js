@@ -36,6 +36,22 @@ const mapearPokemons = async () => {
     return infoPokemons;
 };
 
+const medirNombre = (nombre) => {
+
+    console.log(nombre.length);
+    if (nombre.length > 10) {
+
+     
+        return `<h2 class="nombre-chico">${nombre}</h2>`;
+    }
+
+    else {
+
+        return `<h2>${nombre}</h2>`;
+    }
+    
+}
+
 const dibujarPokemons = (pokemon) => {
 
     console.log(pokemon);
@@ -46,7 +62,11 @@ const dibujarPokemons = (pokemon) => {
     <img class="pokebola" src="/pokeball.png" alt="pokebola">
     <img class="imagen-pokemon" src="${sprites.other.home.front_default}" alt="imagen del pokemon">
     <p class="id-pokemon">#${id}</p>
-    <h2>${name.toUpperCase()}</h2>
+    
+
+   ${medirNombre(name.toUpperCase())}
+    
+    
     <div class="caja-data">
     <span class="exp">EXP: ${base_experience}</span>
 
